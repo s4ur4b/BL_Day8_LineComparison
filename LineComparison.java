@@ -53,9 +53,13 @@ class Length{
     }
     //Function for comparing lengths
     void comparison(double distance1, double distance2){
-        if(distance1 == distance2){
+        String myStr1 = Double.toString(distance1);
+        String myStr2 = Double.toString(distance2);
+        if(myStr1.compareTo(myStr2) ==0){
             System.out.println("The line lengths are equal");}
+        else if(myStr1.compareTo(myStr2) >0)
+            System.out.println("The line-1 length is greater than line-2 length");
         else
-            System.out.println("The line lengths are not equal");
+            System.out.println("The line-1 length is smaller than line-2 length");
     }
 }
